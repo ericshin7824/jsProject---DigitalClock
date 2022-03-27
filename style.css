@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+body .max-width {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body .scroll-down .header-wraper {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+body .scroll-up .header-wraper {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .nav-wrapper {
+  position: fixed;
+  top: 0;
+  background: #111111;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  -webkit-filter: drop-shadow(0 -5px 10px #aaaaaa);
+          filter: drop-shadow(0 -5px 10px #aaaaaa);
+}
+
+body .nav-wrapper .nav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .nav-wrapper .nav .logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+body .main-content-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content {
+  position: relative;
+  background: #2d2f41;
+  width: 600px;
+  height: 400px;
+  padding: 24px;
+  -webkit-box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+          box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+  border-radius: 18px;
+  border: 8px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  list-style: none;
+  background: #353e54;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .clock-format-text {
+  color: #efefef;
+  font-size: 0.9em;
+  margin-right: 20px;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn {
+  width: 35px;
+  height: 15px;
+  background: #485470;
+  border-radius: 75px;
+  -webkit-box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ff5e9a;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 25px #ff5e9a;
+          box-shadow: 0 5px 25px #ff5e9a;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+}
+
+body .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn.active:before {
+  background: #0bff8d;
+  -webkit-box-shadow: 0 5px 25px #0bff8d;
+          box-shadow: 0 5px 25px #0bff8d;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper {
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper .tittle {
+  text-align: left;
+  line-height: 1.4;
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper .tittle .project-name,
+body .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name {
+  color: #fff;
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper .tittle .project-name span {
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+body .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name span {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 8px;
+  z-index: -1;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  -webkit-animation: glowing 10s ease-in-out infinite;
+          animation: glowing 10s ease-in-out infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock {
+  position: relative;
+  color: #fff;
+  background: #353e54;
+  width: 520px;
+  padding: 20px 45px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time {
+  color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .hours,
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .dots,
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .minutes {
+  padding: 0 10px;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .hours,
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .minutes {
+  font-size: 6.5em;
+  width: 180px;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .dots {
+  font-size: 5em;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .right-side {
+  color: #fff;
+  position: relative;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .right-side .period,
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .right-side .seconds {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .right-side .period {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .digital-clock .time .right-side .seconds {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .day-name,
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .day-number,
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .year {
+  margin-left: 8px;
+}
+
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .month-name,
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .day-name,
+body .main-content-wrapper .main-content .digital-clock-wrapper .calender .day-number {
+  font-family: "Orbitron", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
