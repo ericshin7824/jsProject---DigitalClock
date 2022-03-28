@@ -95,7 +95,7 @@ body main .main-content-wrapper {
 
 body main .main-content-wrapper .main-content {
   position: relative;
-  background: -webkit-linear-gradient(325deg, #6e6e6e 10%, #414141 74%);
+  background: -webkit-linear-gradient(325deg, #ababab 0%, #5e5e5e 50%, #414141 100%);
   width: 600px;
   height: 400px;
   padding: 24px;
@@ -251,7 +251,7 @@ body main .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-na
 body main .main-content-wrapper .main-content .clock-wrapper .clock {
   position: relative;
   color: #fff;
-  background: -webkit-linear-gradient(325deg, #6e6e6e 10%, #414141 74%);
+  background: transparent;
   width: 520px;
   padding: 20px 45px;
   margin-top: 30px;
