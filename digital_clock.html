@@ -18,9 +18,9 @@
         </header>
 
         <main>
-            <div class="main-content-wrapper">
-                <section class="main-content">
-                    <div class="show-menu">
+            <section class="content-BG">
+                <div class="digital-clock">
+                    <div class="menu-box">
                         <i onclick="showMenu(this)" class="fas fa-cog dot-menu-btn" id="active-menu"></i>
                         <ul class="dot-menu active-menu" id="active-menu">
                             <li class="menu-item" id="active-menu">
@@ -29,40 +29,35 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="digital-clock">
-                        <div class="tittle-wrapper">
-                            <div class="tittle">
-                                <div class="project-name">
-                                    <span>Javascript project</span>
-                                </div>
-                                <div class="tittle-name">
-                                    <h1>DIGITAL COLOCK</h1>
-                                    <span>Switching hours format</span>
-                                </div>
-                            </div>
+
+                    <div class="tittle-container">
+                        <div class="tittle">
+                            <span>Javascript project</span>
+                            <h2>DIGITAL COLOCK</h2>
+                            <p>Switch hours format</p>
                         </div>
-                        <div class="clock-wrapper">
-                            <div class="clock">
-                                <div class="calender">
-                                    <span class="month-name">Mar</span>,
-                                    <span class="day-name">Day</span>
-                                    <span class="day-number">0</span>
-                                    <!-- <span class="year">0000</span> -->
-                                </div>
-                                <div class="time">
-                                    <span class="hours">00</span>
-                                    <span class="dots">:</span>
-                                    <span class="minutes">00</span>
-                                    <div class="right-side">
-                                        <span class="period">AM/PM</span>
-                                        <span class="seconds">00</span>
-                                    </div>
-                                </div>
+                    </div>
+
+                    <div class="clock">
+                        <div class="calender">
+                            <span class="month-name">Month</span>
+                            <span class="day-name">Day</span>
+                            <span class="day-number">Number</span>
+                            <!-- <span class="years">0000</span> -->
+                        </div>
+
+                        <div class="time">
+                            <span class="hours">00</span>
+                            <span class="dots">:</span>
+                            <span class="minutes">00</span>
+                            <div class="right-side">
+                                <span class="period">AM/PM</span>
+                                <span class="seconds">00</span>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
 
         <script src="digital_clock.js"></script>

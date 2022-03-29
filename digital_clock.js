@@ -21,6 +21,7 @@ const clock = function () {
     const clockMinutes = document.querySelector(".minutes");
     const clockPeriod = document.querySelector(".period");
     const clockSecond = document.querySelector(".seconds");
+    const clockYears = document.querySelector(".years");
 
     let today = new Date();
 
@@ -28,6 +29,7 @@ const clock = function () {
     let minutes = today.getMinutes();
     let seconds = today.getSeconds();
     let period = "AM";
+    // let years = today.getFullYear();
 
     // Set the 12-hour clock format
     var formatValue = formatSwitchBtn.getAttribute("data-format");
@@ -56,6 +58,7 @@ const clock = function () {
     clockMinutes.innerHTML = minutes;
     clockPeriod.innerHTML = period;
     clockSecond.innerHTML = seconds;
+    // clockYears.innerHTML = years;
 };
 updateClock = setInterval(clock, 1000);
 

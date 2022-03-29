@@ -9,10 +9,10 @@
 }
 
 body {
-  position: relative;
   background: #fff;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 body .max-width {
@@ -21,14 +21,15 @@ body .max-width {
 }
 
 body .nav-wrapper {
-  position: fixed;
-  top: 0;
   background: #111111;
   color: #fff;
   width: 100%;
   height: 60px;
   -webkit-filter: drop-shadow(0 -5px 10px #aaaaaa);
           filter: drop-shadow(0 -5px 10px #aaaaaa);
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 body .nav-wrapper .nav {
@@ -50,10 +51,11 @@ body .nav-wrapper .nav .logo {
   text-decoration: none;
 }
 
-body main {
+body main .content-BG {
+  background: #222;
   width: 100%;
   height: 100vh;
-  background: #222;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,191 +65,32 @@ body main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 888;
 }
 
-body main .main-content-wrapper {
+body main .content-BG .digital-clock::before {
+  content: "";
   background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
   width: 620px;
   height: 420px;
   border-radius: 18px;
-  -webkit-box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
-          box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-body main .main-content-wrapper .main-content {
-  position: relative;
+body main .content-BG .digital-clock {
   background: -webkit-linear-gradient(325deg, #ababab 0%, #5e5e5e 50%, #414141 100%);
   width: 600px;
   height: 400px;
-  padding: 24px;
+  padding: 24px 60px;
   border-radius: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px;
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu {
-  position: absolute;
-  top: 7px;
-  right: 5px;
-  list-style: none;
-  background: #222;
-  padding: 10px 20px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu .menu-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .clock-format-text {
-  color: #efefef;
-  font-size: 0.9em;
-  margin-right: 20px;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn {
-  width: 35px;
-  height: 15px;
-  background: #485470;
-  border-radius: 75px;
-  -webkit-box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn:before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #ff5e9a;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 5px 25px #ff5e9a;
-          box-shadow: 0 5px 25px #ff5e9a;
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  -webkit-transition-property: background, -webkit-transform;
-  transition-property: background, -webkit-transform;
-  transition-property: background, transform;
-  transition-property: background, transform, -webkit-transform;
-}
-
-body main .main-content-wrapper .main-content .show-menu .dot-menu .menu-item .format-switch-btn.active:before {
-  background: #0bff8d;
-  -webkit-box-shadow: 0 5px 25px #0bff8d;
-          box-shadow: 0 5px 25px #0bff8d;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper {
-  width: 100%;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle {
-  text-align: left;
-  line-height: 1.4;
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle .project-name,
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name {
-  color: #fff;
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle .project-name span {
-  font-size: 0.7em;
-  font-weight: 300;
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name h1 {
-  font-size: 2em;
-  font-weight: 600;
-}
-
-body main .main-content-wrapper .main-content .tittle-wrapper .tittle .tittle-name span {
-  font-size: 1.2em;
-  font-weight: 400;
-}
-
-body main .main-content-wrapper .main-content .clock-wrapper .clock {
   position: relative;
-  color: #fff;
-  background: transparent;
-  width: 520px;
-  padding: 20px 45px;
-  margin-top: 30px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  border: 1px solid #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,7 +106,170 @@ body main .main-content-wrapper .main-content .clock-wrapper .clock {
           flex-direction: column;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time {
+body main .content-BG .digital-clock .menu-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu-btn {
+  margin: 10px;
+  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  list-style: none;
+  z-index: 999;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .clock-format-text {
+  color: #fff;
+  font-size: 0.9em;
+  margin-right: 20px;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
+  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  width: 54px;
+  height: 14px;
+  border-radius: 75px;
+  -webkit-box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn:before {
+  content: "";
+  background: #ff5e9a;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 25px #ff5e9a;
+          box-shadow: 0 5px 25px #ff5e9a;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-11px, -50%);
+          transform: translate(-11px, -50%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn.active:before {
+  background: #0bff8d;
+  -webkit-box-shadow: 0 5px 25px #0bff8d;
+          box-shadow: 0 5px 25px #0bff8d;
+  -webkit-transform: translate(11px, -50%);
+          transform: translate(11px, -50%);
+}
+
+body main .content-BG .digital-clock .tittle-container {
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle {
+  text-align: left;
+  line-height: 1.4;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+body main .content-BG .digital-clock .clock {
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  padding: 20px 45px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .content-BG .digital-clock .clock .time {
   color: #fff;
   position: relative;
   display: -webkit-box;
@@ -277,9 +283,9 @@ body main .main-content-wrapper .main-content .clock-wrapper .clock .time {
           align-items: center;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .hours,
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .dots,
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .minutes {
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .dots,
+body main .content-BG .digital-clock .clock .time .minutes {
   padding: 0 10px;
   font-weight: 600;
   font-family: "Orbitron", sans-serif;
@@ -294,29 +300,35 @@ body main .main-content-wrapper .main-content .clock-wrapper .clock .time .minut
           align-items: center;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .hours,
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .minutes {
-  font-size: 6.5em;
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .minutes,
+body main .content-BG .digital-clock .clock .time .dots {
   background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .dots {
-  font-size: 5em;
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .minutes {
+  font-size: 6em;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .right-side {
-  position: relative;
+body main .content-BG .digital-clock .clock .time .dots {
+  font-size: 5em;
+  margin-bottom: 12px;
+}
+
+body main .content-BG .digital-clock .clock .time .right-side {
   color: #fff;
-  margin-left: 10px;
+  margin: 0 0 3px 12px;
   height: 90px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -326,20 +338,21 @@ body main .main-content-wrapper .main-content .clock-wrapper .clock .time .right
           flex-direction: column;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .right-side .period,
-body main .main-content-wrapper .main-content .clock-wrapper .clock .time .right-side .seconds {
+body main .content-BG .digital-clock .clock .time .right-side .period,
+body main .content-BG .digital-clock .clock .time .right-side .seconds {
   background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "Orbitron", sans-serif;
   font-size: 1.2em;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .calender {
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: 500;
+body main .content-BG .digital-clock .calender {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
   margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,15 +365,16 @@ body main .main-content-wrapper .main-content .clock-wrapper .calender {
           align-items: center;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .calender .day-name,
-body main .main-content-wrapper .main-content .clock-wrapper .calender .day-number,
-body main .main-content-wrapper .main-content .clock-wrapper .calender .year {
-  margin-left: 8px;
+body main .content-BG .digital-clock .calender .day-name,
+body main .content-BG .digital-clock .calender .day-number,
+body main .content-BG .digital-clock .calender .years {
+  margin-left: 12px;
 }
 
-body main .main-content-wrapper .main-content .clock-wrapper .calender .month-name,
-body main .main-content-wrapper .main-content .clock-wrapper .calender .day-name,
-body main .main-content-wrapper .main-content .clock-wrapper .calender .day-number {
+body main .content-BG .digital-clock .calender .month-name,
+body main .content-BG .digital-clock .calender .day-name,
+body main .content-BG .digital-clock .calender .day-number,
+body main .content-BG .digital-clock .calender .years {
   background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
