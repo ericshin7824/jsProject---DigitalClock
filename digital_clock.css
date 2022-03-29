@@ -20,16 +20,6 @@ body .max-width {
   margin: 0 auto;
 }
 
-body .scroll-down .header-wraper {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-body .scroll-up .header-wraper {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 body .nav-wrapper {
   position: fixed;
   top: 0;
@@ -376,4 +366,4 @@ body main .main-content-wrapper .main-content .clock-wrapper .calender .day-numb
   -webkit-background-clip: text;
   font-family: "Orbitron", sans-serif;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=digital_clock.css.map */
