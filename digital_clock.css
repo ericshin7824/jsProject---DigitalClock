@@ -73,6 +73,7 @@ body main .content-BG .digital-clock::before {
   background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
   width: 620px;
   height: 420px;
+  border: 1px solid #fff;
   border-radius: 18px;
   -webkit-box-shadow: 0px 25px 35px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 25px 35px 15px rgba(0, 0, 0, 0.2);
