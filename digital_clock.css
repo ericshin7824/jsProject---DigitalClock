@@ -70,13 +70,12 @@ body main .content-BG {
 
 body main .content-BG .digital-clock::before {
   content: "";
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   width: 620px;
   height: 420px;
-  border: 1px solid #fff;
   border-radius: 18px;
-  -webkit-box-shadow: 0px 25px 35px 15px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 25px 35px 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -86,7 +85,7 @@ body main .content-BG .digital-clock::before {
 }
 
 body main .content-BG .digital-clock {
-  background: -webkit-linear-gradient(325deg, #ababab 0%, #5e5e5e 50%, #414141 100%);
+  background: -webkit-linear-gradient(-45deg, #a0a0a0 0%, #6e6e6e 60%, #4b4b4b 100%);
   width: 600px;
   height: 400px;
   padding: 24px 60px;
@@ -115,7 +114,7 @@ body main .content-BG .digital-clock .menu-box {
 
 body main .content-BG .digital-clock .menu-box .dot-menu-btn {
   margin: 10px;
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-size: 1.5em;
@@ -163,7 +162,7 @@ body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .clock-forma
 }
 
 body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   width: 54px;
   height: 14px;
   border-radius: 75px;
@@ -304,7 +303,7 @@ body main .content-BG .digital-clock .clock .time .minutes {
 body main .content-BG .digital-clock .clock .time .hours,
 body main .content-BG .digital-clock .clock .time .minutes,
 body main .content-BG .digital-clock .clock .time .dots {
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -341,7 +340,7 @@ body main .content-BG .digital-clock .clock .time .right-side {
 
 body main .content-BG .digital-clock .clock .time .right-side .period,
 body main .content-BG .digital-clock .clock .time .right-side .seconds {
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "Orbitron", sans-serif;
@@ -376,7 +375,7 @@ body main .content-BG .digital-clock .calender .month-name,
 body main .content-BG .digital-clock .calender .day-name,
 body main .content-BG .digital-clock .calender .day-number,
 body main .content-BG .digital-clock .calender .years {
-  background: -webkit-linear-gradient(90deg, #ababab 0%, #ebebeb 74%);
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "Orbitron", sans-serif;
