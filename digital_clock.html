@@ -5,61 +5,56 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Digital clock switch hours format with Javascript</title>
-        <link rel="stylesheet" href="digital_clock.css" />
+        <link rel="stylesheet" href="./digital_clock.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="nav-wrapper">
-            <div class="nav max-width">
-                <a class="logo" href="">
-                    <h1>hoon.</h1>
-                </a>
+        <nav>
+            <div class="contents-container">
+                <a class="logo" href="https://www.erichoonshin.com/">Hn.</a>
             </div>
-        </header>
+        </nav>
+        <main class="digital-clock-wrapper">
+            <div class="digital-clock">
+                <div class="menu-box">
+                    <i onclick="showMenu(this)" class="fas fa-cog dot-menu-btn" id="active-menu"></i>
+                    <ul class="dot-menu active-menu" id="active-menu">
+                        <li class="menu-item" id="active-menu">
+                            <span class="clock-format-text active-menu" id="active-menu">Switch format</span>
+                            <div class="format-switch-btn active-menu" id="active-menu" data-format="12"></div>
+                        </li>
+                    </ul>
+                </div>
 
-        <main>
-            <section class="content-BG">
-                <div class="digital-clock">
-                    <div class="menu-box">
-                        <i onclick="showMenu(this)" class="fas fa-cog dot-menu-btn" id="active-menu"></i>
-                        <ul class="dot-menu active-menu" id="active-menu">
-                            <li class="menu-item" id="active-menu">
-                                <span class="clock-format-text active-menu" id="active-menu">Switch format</span>
-                                <div class="format-switch-btn active-menu" id="active-menu" data-format="12"></div>
-                            </li>
-                        </ul>
+                <!-- <div class="tittle-container">
+                </div> -->
+                <div class="title">
+                    <span>Javascript project</span>
+                    <h2>DIGITAL COLOCK</h2>
+                    <p>Switch hours format</p>
+                </div>
+
+                <div class="clock">
+                    <div class="calender">
+                        <span class="month-name">Month</span>
+                        <span class="day-name">Day</span>
+                        <span class="day-number">Number</span>
+                        <!-- <span class="years">0000</span> -->
                     </div>
 
-                    <div class="tittle-container">
-                        <div class="tittle">
-                            <span>Javascript project</span>
-                            <h2>DIGITAL COLOCK</h2>
-                            <p>Switch hours format</p>
-                        </div>
-                    </div>
-
-                    <div class="clock">
-                        <div class="calender">
-                            <span class="month-name">Month</span>
-                            <span class="day-name">Day</span>
-                            <span class="day-number">Number</span>
-                            <!-- <span class="years">0000</span> -->
-                        </div>
-
-                        <div class="time">
-                            <span class="hours">00</span>
-                            <span class="dots">:</span>
-                            <span class="minutes">00</span>
-                            <div class="right-side">
-                                <span class="period">AM/PM</span>
-                                <span class="seconds">00</span>
-                            </div>
+                    <div class="time">
+                        <span class="hours">00</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <div class="right-side">
+                            <span class="period">AM/PM</span>
+                            <span class="seconds">00</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
-        <script src="digital_clock.js"></script>
+        <script src="./digital_clock.js"></script>
     </body>
 </html>

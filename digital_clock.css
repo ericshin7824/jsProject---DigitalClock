@@ -1,61 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  --primary-color-dark: rgba(25, 25, 25, 1);
+  --primary-color-light: rgba(255, 255, 255, 1);
+  --primary-color-yellow: rgba(255, 194, 41, 1);
+  --primary-color-gray: rgba(160, 160, 160, 1);
+  --success-color-green: rgb(104, 241, 99);
+  --logo-size: 1.4rem;
+  --nav-height-l: 3.125rem;
+  --nav-height-m: 2.5rem;
+  --footer-height-l: 2.5rem;
+  --footer-height-m: 1.875rem;
+  --max-w-1920: 120rem;
+  --max-w-1440: 90rem;
+  --max-w-960: 60rem;
+  --max-w-540: 35rem;
+  --min-w-360: 360px;
+  --space-5: 0.3125rem;
+  --space-6: 0.375rem;
+  --space-7h: 0.46875rem;
+  --space-8: 0.5rem;
+  --space-10: 0.625rem;
+  --space-12: 0.75rem;
+  --space-15: 0.9375rem;
+  --space-20: 1.25rem;
+  --space-25: 1.5625rem;
+  --space-30: 1.875rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-50: 3.125rem;
+  --space-60: 3.75rem;
+  --space-70: 4.375rem;
+  --space-80: 5rem;
+  --space-90: 5.625rem;
+  --space-100: 6.25rem;
+  --space-120: 7.5rem;
+  --space-140: 8.75rem;
+  --space-150: 9.375rem;
+  --space-160: 10rem;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --default-text-align: left;
+  --font-weight-300: 300;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-800: 800;
+  --font-size-10: 0.625rem;
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.8125rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-22: 1.375rem;
+  --font-size-24: 1.5rem;
+  --font-size-26: 1.625rem;
+  --font-size-27: 1.6875rem;
+  --font-size-28: 1.75rem;
+  --font-size-32: 2rem;
+  --font-size-40: 2.5rem;
+  --font-size-42: 2.625rem;
+  --font-size-48: 3rem;
+  --font-size-54: 3.375rem;
+  --font-size-60: 3.75rem;
+  --font-size-64: 4rem;
+  --font-size-72: 4.5rem;
+  --font-size-80: 5rem;
+  --font-size-96: 6rem;
+  --font-size-108: 6.75rem;
+  --font-size-126: 7.875rem;
+  --font-size-128: 8rem;
+  --font-size-144: 9rem;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
 }
 
 body {
-  background: #fff;
-  width: 100%;
-  height: 100%;
   position: relative;
-}
-
-body .max-width {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-body .nav-wrapper {
-  background: #111111;
-  color: #fff;
-  width: 100%;
-  height: 60px;
-  -webkit-filter: drop-shadow(0 -5px 10px #aaaaaa);
-          filter: drop-shadow(0 -5px 10px #aaaaaa);
-  position: fixed;
-  top: 0;
-  z-index: 999;
-}
-
-body .nav-wrapper .nav {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .nav-wrapper .nav .logo {
-  color: #fff;
-  text-decoration: none;
-}
-
-body main .content-BG {
   background: #333;
-  width: 100%;
   height: 100vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,30 +100,49 @@ body main .content-BG {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 888;
 }
 
-body main .content-BG .digital-clock::before {
-  content: "";
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height-l);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .contents-container {
+  width: 100%;
+  padding-left: var(--space-40);
+  padding-right: var(--space-40);
+}
+
+nav .contents-container .logo {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color-light);
+  font-size: var(--logo-size);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.digital-clock-wrapper {
   background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
-  width: 620px;
-  height: 420px;
   border-radius: 18px;
   -webkit-box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -1;
+  padding: var(--space-10);
 }
 
-body main .content-BG .digital-clock {
+.digital-clock-wrapper .digital-clock {
   background: -webkit-linear-gradient(-45deg, #a0a0a0 0%, #6e6e6e 60%, #4b4b4b 100%);
-  width: 600px;
-  height: 400px;
-  padding: 24px 60px;
+  padding: var(--space-20) var(--space-60);
   border-radius: 18px;
   position: relative;
   display: -webkit-box;
@@ -104,37 +158,38 @@ body main .content-BG .digital-clock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: var(--space-20);
 }
 
-body main .content-BG .digital-clock .menu-box {
+.digital-clock-wrapper .digital-clock .menu-box {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--space-10);
+  right: var(--space-10);
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu-btn {
-  margin: 10px;
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu-btn {
+  margin: var(--space-10);
   background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 1.5em;
+  font-size: var(--font-size-24);
   cursor: pointer;
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu.active {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu.active {
   visibility: visible;
   opacity: 1;
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu {
   background: #222;
-  padding: 10px 20px;
+  padding: var(--space-10) var(--space-20);
   border-radius: 12px;
   -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--space-10);
+  right: var(--space-10);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   visibility: hidden;
@@ -143,7 +198,7 @@ body main .content-BG .digital-clock .menu-box .dot-menu {
   z-index: 999;
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu .menu-item {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,18 +208,18 @@ body main .content-BG .digital-clock .menu-box .dot-menu .menu-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: var(--space-20);
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .clock-format-text {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item .clock-format-text {
   color: #fff;
-  font-size: 0.9em;
-  margin-right: 20px;
+  font-size: var(--font-size-12);
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
   background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
-  width: 54px;
-  height: 14px;
+  width: var(--space-50);
+  height: var(--space-12);
   border-radius: 75px;
   -webkit-box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -181,11 +236,11 @@ body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-swit
   cursor: pointer;
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn:before {
-  content: "";
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn:before {
+  content: '';
   background: #ff5e9a;
-  width: 12px;
-  height: 12px;
+  width: var(--space-12);
+  height: var(--space-12);
   border-radius: 50%;
   -webkit-box-shadow: 0 5px 25px #ff5e9a;
           box-shadow: 0 5px 25px #ff5e9a;
@@ -201,7 +256,7 @@ body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-swit
   transition-property: background, transform, -webkit-transform;
 }
 
-body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn.active:before {
+.digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn.active:before {
   background: #0bff8d;
   -webkit-box-shadow: 0 5px 25px #0bff8d;
           box-shadow: 0 5px 25px #0bff8d;
@@ -209,48 +264,34 @@ body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-swit
           transform: translate(11px, -50%);
 }
 
-body main .content-BG .digital-clock .tittle-container {
+.digital-clock-wrapper .digital-clock .title {
   background: transparent;
   color: #fff;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main .content-BG .digital-clock .tittle-container .tittle {
   text-align: left;
   line-height: 1.4;
 }
 
-body main .content-BG .digital-clock .tittle-container .tittle h2 {
-  font-size: 2.2em;
+.digital-clock-wrapper .digital-clock .title h2 {
+  font-size: var(--font-size-48);
   font-weight: 600;
 }
 
-body main .content-BG .digital-clock .tittle-container .tittle span {
-  font-size: 0.8em;
-  font-weight: 300;
+.digital-clock-wrapper .digital-clock .title span {
+  font-size: var(--font-size-16);
+  font-weight: 200;
 }
 
-body main .content-BG .digital-clock .tittle-container .tittle p {
-  font-size: 1.2em;
+.digital-clock-wrapper .digital-clock .title p {
+  font-size: var(--font-size-24);
   font-weight: 400;
 }
 
-body main .content-BG .digital-clock .clock {
+.digital-clock-wrapper .digital-clock .clock {
   background: transparent;
   color: #fff;
   width: 100%;
-  padding: 20px 45px;
-  margin-top: 30px;
-  margin-bottom: 12px;
+  padding: var(--space-20);
   border-radius: 10px;
   border: 1px solid #fff;
   position: relative;
@@ -269,7 +310,7 @@ body main .content-BG .digital-clock .clock {
           flex-direction: column;
 }
 
-body main .content-BG .digital-clock .clock .time {
+.digital-clock-wrapper .digital-clock .clock .time {
   color: #fff;
   position: relative;
   display: -webkit-box;
@@ -281,14 +322,18 @@ body main .content-BG .digital-clock .clock .time {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: var(--space-10);
 }
 
-body main .content-BG .digital-clock .clock .time .hours,
-body main .content-BG .digital-clock .clock .time .dots,
-body main .content-BG .digital-clock .clock .time .minutes {
-  padding: 0 10px;
+.digital-clock-wrapper .digital-clock .clock .time .hours,
+.digital-clock-wrapper .digital-clock .clock .time .dots,
+.digital-clock-wrapper .digital-clock .clock .time .minutes {
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: var(--font-size-80);
   font-weight: 600;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,28 +345,14 @@ body main .content-BG .digital-clock .clock .time .minutes {
           align-items: center;
 }
 
-body main .content-BG .digital-clock .clock .time .hours,
-body main .content-BG .digital-clock .clock .time .minutes,
-body main .content-BG .digital-clock .clock .time .dots {
-  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+.digital-clock-wrapper .digital-clock .clock .time .dots {
+  margin-bottom: var(--space-10);
 }
 
-body main .content-BG .digital-clock .clock .time .hours,
-body main .content-BG .digital-clock .clock .time .minutes {
-  font-size: 6em;
-}
-
-body main .content-BG .digital-clock .clock .time .dots {
-  font-size: 5em;
-  margin-bottom: 12px;
-}
-
-body main .content-BG .digital-clock .clock .time .right-side {
+.digital-clock-wrapper .digital-clock .clock .time .right-side {
   color: #fff;
-  margin: 0 0 3px 12px;
-  height: 90px;
+  margin-left: var(--space-10);
+  height: var(--space-90);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,22 +369,21 @@ body main .content-BG .digital-clock .clock .time .right-side {
           flex-direction: column;
 }
 
-body main .content-BG .digital-clock .clock .time .right-side .period,
-body main .content-BG .digital-clock .clock .time .right-side .seconds {
+.digital-clock-wrapper .digital-clock .clock .time .right-side .period,
+.digital-clock-wrapper .digital-clock .clock .time .right-side .seconds {
   background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.2em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: var(--font-size-18);
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-body main .content-BG .digital-clock .calender {
-  font-size: 1.2em;
+.digital-clock-wrapper .digital-clock .calender {
+  font-size: var(--font-size-18);
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,21 +393,77 @@ body main .content-BG .digital-clock .calender {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: var(--space-10);
 }
 
-body main .content-BG .digital-clock .calender .day-name,
-body main .content-BG .digital-clock .calender .day-number,
-body main .content-BG .digital-clock .calender .years {
-  margin-left: 12px;
-}
-
-body main .content-BG .digital-clock .calender .month-name,
-body main .content-BG .digital-clock .calender .day-name,
-body main .content-BG .digital-clock .calender .day-number,
-body main .content-BG .digital-clock .calender .years {
+.digital-clock-wrapper .digital-clock .calender .month-name,
+.digital-clock-wrapper .digital-clock .calender .day-name,
+.digital-clock-wrapper .digital-clock .calender .day-number,
+.digital-clock-wrapper .digital-clock .calender .years {
   background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@media only screen and (max-width: 35rem) {
+  .digital-clock-wrapper {
+    padding: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock {
+    padding: var(--space-10) var(--space-30);
+    gap: var(--space-10);
+  }
+  .digital-clock-wrapper .digital-clock .menu-box {
+    top: var(--space-5);
+    right: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock .menu-box .dot-menu-btn {
+    margin: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock .menu-box .dot-menu {
+    padding: var(--space-5) var(--space-10);
+  }
+  .digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item {
+    gap: var(--space-10);
+  }
+  .digital-clock-wrapper .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
+    width: var(--space-40);
+    height: var(--space-8);
+  }
+  .digital-clock-wrapper .digital-clock .title h2 {
+    font-size: var(--font-size-24);
+  }
+  .digital-clock-wrapper .digital-clock .title span {
+    font-size: var(--font-size-12);
+  }
+  .digital-clock-wrapper .digital-clock .title p {
+    font-size: var(--font-size-16);
+  }
+  .digital-clock-wrapper .digital-clock .clock {
+    padding: var(--space-10);
+  }
+  .digital-clock-wrapper .digital-clock .clock .time {
+    gap: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock .clock .time .dots {
+    margin-bottom: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock .clock .time .hours,
+  .digital-clock-wrapper .digital-clock .clock .time .dots,
+  .digital-clock-wrapper .digital-clock .clock .time .minutes {
+    font-size: var(--font-size-60);
+  }
+  .digital-clock-wrapper .digital-clock .clock .time .right-side {
+    margin-left: var(--space-5);
+  }
+  .digital-clock-wrapper .digital-clock .clock .time .right-side .period,
+  .digital-clock-wrapper .digital-clock .clock .time .right-side .seconds {
+    font-size: var(--font-size-14);
+  }
+  .digital-clock-wrapper .digital-clock .calender {
+    font-size: var(--font-size-16);
+    gap: var(--space-5);
+  }
 }
 /*# sourceMappingURL=digital_clock.css.map */
